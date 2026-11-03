@@ -72,9 +72,9 @@ const Visual: React.FC = () => (
     <path d={st2} fill="none" stroke={C.white} strokeOpacity={0.4} strokeWidth={8} />
     {nodes.map((x, i) => <circle key={i} cx={x} cy={SY} r={16} fill={C.heat} />)}
     <text x={nodes[1]} y={SY + SA + 70} textAnchor="middle" fill={C.heat} fontSize={44} style={mono}>simpul</text>
-    <text x={nodes[3]} y={SY + SA + 70} textAnchor="middle" fill={C.press} fontSize={44} style={mono}>λ/2</text>
-    <line x1={nodes[2] + 10} y1={SY + SA + 20} x2={nodes[4] - 10} y2={SY + SA + 20} stroke={C.press} strokeWidth={4} />
-    <line x1={nodes[2] + 10} y1={SY + SA + 5} x2={nodes[2] + 10} y2={SY + SA + 35} stroke={C.press} strokeWidth={4} />
+    <text x={(nodes[3] + nodes[4]) / 2} y={SY + SA + 70} textAnchor="middle" fill={C.press} fontSize={44} style={mono}>λ/2</text>
+    <line x1={nodes[3]} y1={SY + SA + 20} x2={nodes[4]} y2={SY + SA + 20} stroke={C.press} strokeWidth={4} />
+    <line x1={nodes[4]} y1={SY + SA + 5} x2={nodes[4]} y2={SY + SA + 35} stroke={C.press} strokeWidth={4} />
     <line x1={nodes[3]} y1={SY + SA + 5} x2={nodes[3]} y2={SY + SA + 35} stroke={C.press} strokeWidth={4} />
   </g>
 );
